@@ -7,8 +7,6 @@ import (
 
 type User struct {
 	gorm.Model
-	Username string
-	Password string
+	Username string `gorm:"type:varchar(100);unique_index"`
+	Password string `gorm:"type:varchar(100);not_null"`
 }
-
-
